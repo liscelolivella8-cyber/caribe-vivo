@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caribe Vivo | Clima, ecosistemas y biodiversidad</title>
+<style>
+:root{--green:#176b4d;--lime:#c9e86b;--blue:#167d9a;--sand:#fff8e8;--ink:#17342b;--muted:#557067;--card:#ffffff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f8f1;color:var(--ink);line-height:1.6}
+header{background:linear-gradient(120deg,#0c4938,#137d70 58%,#64b7a0);color:white;padding:22px max(5vw,20px) 76px;position:relative;overflow:hidden}
+nav{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;max-width:1120px;margin:auto}
+.logo{font-weight:900;letter-spacing:.5px;font-size:1.15rem}.logo span{color:var(--lime)}
+nav a{color:white;text-decoration:none;margin-left:16px;font-size:.92rem}nav a:hover{text-decoration:underline}
+.hero{max-width:1120px;margin:62px auto 0;display:grid;grid-template-columns:1.15fr .85fr;gap:35px;align-items:center}
+.kicker{color:var(--lime);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:.78rem}
+h1{font-size:clamp(2.4rem,5.5vw,4.8rem);line-height:1.02;margin:12px 0 20px;letter-spacing:-2px}
+.hero p{font-size:1.1rem;max-width:620px;color:#e6f6ef}
+.cta{display:inline-block;background:var(--lime);color:#153d2f;padding:12px 18px;border-radius:999px;font-weight:800;text-decoration:none;margin-top:10px}
+.hero-art{min-height:300px;border-radius:28px;background:linear-gradient(180deg,#83d8db 0 45%,#e4d49a 45% 57%,#378a5a 57%);position:relative;overflow:hidden;box-shadow:0 18px 40px #003f373d}
+.sun{position:absolute;right:15%;top:13%;width:72px;height:72px;background:#ffe88c;border-radius:50%;box-shadow:0 0 0 18px #ffe88c35}
+.wave{position:absolute;bottom:-12px;left:-5%;width:110%;height:105px;background:#187d92;border-radius:50% 50% 0 0/35% 40% 0 0;transform:rotate(-3deg)}
+.leaf{position:absolute;font-size:5rem;filter:drop-shadow(0 8px 4px #17342b30)}.leaf.one{left:12%;bottom:35px}.leaf.two{right:14%;bottom:50px;font-size:4rem}
+main{max-width:1120px;margin:auto;padding:0 22px}
+section{padding:66px 0;scroll-margin-top:20px}.section-head{max-width:720px;margin-bottom:28px}.eyebrow{color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:1.5px;font-size:.76rem}
+h2{font-size:clamp(1.8rem,3.5vw,2.7rem);line-height:1.1;margin:8px 0 14px;letter-spacing:-.8px}h3{margin:8px 0;font-size:1.2rem}p{margin:8px 0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--card);padding:23px;border-radius:20px;box-shadow:0 7px 24px #193c2c0d;border:1px solid #e4eee4}
+.icon{font-size:2.1rem}.tag{display:inline-block;border-radius:999px;padding:4px 10px;background:#e9f5d0;color:#365b28;font-size:.76rem;font-weight:800;margin-top:8px}
+.panel{background:#e5f2e9;border-radius:24px;padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.stat{font-size:2.1rem;font-weight:900;color:var(--green)}.chart-wrap{background:white;border-radius:18px;padding:18px;border:1px solid #dcebe0}
+.bar-row{display:grid;grid-template-columns:90px 1fr 46px;gap:10px;align-items:center;margin:14px 0;font-size:.88rem}.track{height:14px;border-radius:20px;background:#e8efeb;overflow:hidden}.bar{height:100%;border-radius:20px;background:linear-gradient(90deg,#1684a0,#8acb73)}
+.note{font-size:.82rem;background:#fff4d7;border-left:4px solid #e7b74a;padding:12px 14px;border-radius:8px;color:#715722}
+.region{border-top:4px solid var(--lime)}.region:nth-child(2){border-color:#4db6d2}.region:nth-child(3){border-color:#e4b35c}
+.steps{counter-reset:step;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{background:#fff;border-radius:18px;padding:22px}.step:before{counter-increment:step;content:counter(step);display:grid;place-items:center;background:var(--green);color:white;font-weight:900;width:36px;height:36px;border-radius:50%}
+.action-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}.action{padding:15px;background:#fff;border-radius:14px;display:flex;gap:12px;align-items:flex-start}.action b{color:var(--green)}
+footer{background:#123f33;color:#e6f6ef;padding:30px 22px;text-align:center}footer p{color:#c4e2d6;font-size:.9rem}.small{font-size:.82rem}
+@media(max-width:760px){.hero{grid-template-columns:1fr;margin-top:40px}.hero-art{min-height:230px}.grid,.steps{grid-template-columns:1fr}.panel{grid-template-columns:1fr}.action-list{grid-template-columns:1fr}nav div:last-child{display:flex;flex-wrap:wrap;gap:8px}nav a{margin-left:0;margin-right:10px}}
+</style>
+</head>
+<body>
+<header id="inicio">
+  <nav><div class="logo">🌿 CARIBE <span>VIVO</span></div><div><a href="#relacion">La relación</a><a href="#regiones">Regiones</a><a href="#datos">Datos</a><a href="#acciones">Soluciones</a></div></nav>
+  <div class="hero">
+    <div><div class="kicker">Proyecto escolar · Región Caribe colombiana</div>
+      <h1>Un clima que cambia.<br>Una vida que cuidar.</h1>
+      <p>Exploramos cómo la temperatura, las lluvias y las sequías transforman los ecosistemas y la biodiversidad del Cesar, Atlántico y La Guajira.</p>
+      <a class="cta" href="#relacion">Explorar el proyecto ↓</a>
+    </div>
+    <div class="hero-art" aria-label="Ilustración del sol, el mar y la vegetación"><div class="sun"></div><div class="leaf one">🌴</div><div class="leaf two">🌱</div><div class="wave"></div></div>
+  </div>
+</header>
+<main>
+<section id="relacion">
+  <div class="section-head"><div class="eyebrow">01 · Entendamos la conexión</div><h2>Todo está conectado</h2><p>El clima determina cuánta agua y calor recibe un lugar. Eso influye en las plantas, los animales y los recursos que necesitan para sobrevivir.</p></div>
+  <div class="grid">
+    <article class="card"><div class="icon">☀️</div><h3>Clima</h3><p>La temperatura, las lluvias, los vientos y las sequías definen las condiciones ambientales.</p><span class="tag">Temperatura + precipitación</span></article>
+    <article class="card"><div class="icon">🌳</div><h3>Ecosistemas</h3><p>Bosques secos, manglares, ríos y humedales dependen del equilibrio entre agua, suelo y clima.</p><span class="tag">Hábitats naturales</span></article>
+    <article class="card"><div class="icon">🦜</div><h3>Biodiversidad</h3><p>Cuando los hábitats cambian, las especies pueden perder alimento, refugio y lugares para reproducirse.</p><span class="tag">Animales + plantas</span></article>
+  </div>
+</section>
+<section id="regiones">
+  <div class="section-head"><div class="eyebrow">02 · Mirada regional</div><h2>Tres territorios, muchos ecosistemas</h2><p>La región Caribe tiene ambientes diversos y enfrenta riesgos climáticos distintos según el territorio.</p></div>
+  <div class="grid">
+    <article class="card region"><div class="icon">🌵</div><h3>La Guajira</h3><p>En las zonas áridas, las sequías y la escasez de agua presionan la vegetación y la fauna. El cuidado del agua es fundamental.</p></article>
+    <article class="card region"><div class="icon">🌾</div><h3>Cesar</h3><p>El calor y los periodos secos pueden afectar bosques, cultivos, ríos y disponibilidad de agua para comunidades y animales.</p></article>
+    <article class="card region"><div class="icon">🦩</div><h3>Atlántico</h3><p>Los humedales, las ciénagas y las áreas costeras pueden verse afectados por inundaciones, contaminación y cambios en las lluvias.</p></article>
+  </div>
+</section>
+<section id="datos">
+  <div class="section-head"><div class="eyebrow">03 · Matemáticas y tecnología</div><h2>Los datos ayudan a entender los cambios</h2><p>Las tablas y gráficas permiten comparar mediciones, reconocer patrones y comunicar resultados de forma clara.</p></div>
+  <div class="panel">
+    <div><div class="stat">📊 Datos → patrones → decisiones</div><h3>¿Qué podemos medir?</h3><p>Temperatura promedio, lluvia mensual, áreas afectadas por sequía y cantidad de especies observadas. Con estos datos se pueden comparar periodos y detectar tendencias.</p><p class="small">La tecnología permite registrar información con estaciones meteorológicas, mapas digitales, sensores y hojas de cálculo.</p></div>
+    <div class="chart-wrap"><h3>Ejemplo de comparación de lluvia</h3><p class="small">Valores ilustrativos, no son mediciones reales de los departamentos.</p>
+      <div class="bar-row"><span>Periodo A</span><div class="track"><div class="bar" style="width:78%"></div></div><b>780</b></div>
+      <div class="bar-row"><span>Periodo B</span><div class="track"><div class="bar" style="width:52%"></div></div><b>520</b></div>
+      <div class="bar-row"><span>Periodo C</span><div class="track"><div class="bar" style="width:67%"></div></div><b>670</b></div>
+      <p class="small">Ejemplo en milímetros de lluvia acumulada. En un trabajo final, reemplaza estos valores por datos de una fuente confiable.</p>
+    </div>
+  </div>
+  <p class="note" style="margin-top:18px"><b>Importante:</b> esta gráfica es únicamente un ejemplo para mostrar cómo representar datos. No debe presentarse como evidencia real del clima local.</p>
+</section>
+<section>
+  <div class="section-head"><div class="eyebrow">04 · Resultados principales</div><h2>¿Qué aprendimos?</h2></div>
+  <div class="steps">
+    <div class="step"><h3>El clima influye</h3><p>Las variaciones de temperatura y lluvia cambian las condiciones de vida de los ecosistemas.</p></div>
+    <div class="step"><h3>Los seres vivos responden</h3><p>Algunas especies se adaptan, se desplazan o disminuyen cuando pierden su hábitat y sus recursos.</p></div>
+    <div class="step"><h3>Los datos orientan</h3><p>Medir y comparar permite comprender los cambios y planear acciones de conservación.</p></div>
+  </div>
+</section>
+<section id="acciones">
+  <div class="section-head"><div class="eyebrow">05 · Pasemos a la acción</div><h2>Pequeñas acciones, grandes cambios</h2><p>La conservación empieza con decisiones cotidianas y con el cuidado de los espacios naturales.</p></div>
+  <div class="action-list">
+    <div class="action"><span>💧</span><div><b>Ahorrar agua</b><p>Cerrar llaves, reparar fugas y evitar contaminar ríos y arroyos.</p></div></div>
+    <div class="action"><span>🌱</span><div><b>Proteger la vegetación</b><p>Sembrar especies nativas y no talar ni quemar zonas naturales.</p></div></div>
+    <div class="action"><span>♻️</span><div><b>Reducir residuos</b><p>Reutilizar materiales y separar los residuos para reciclar.</p></div></div>
+    <div class="action"><span>🔎</span><div><b>Observar y aprender</b><p>Registrar lluvias, temperatura y especies locales para conocer el entorno.</p></div></div>
+  </div>
+  <div class="card" style="margin-top:20px;background:#e9f5d0"><h3>🌎 Nuestra reflexión</h3><p>Comprender la relación entre clima, ecosistemas y biodiversidad nos ayuda a tomar mejores decisiones. Las matemáticas y la tecnología convierten las observaciones en información útil para proteger la riqueza natural de la región Caribe.</p></div>
+</section>
+</main>
+<footer><strong>CARIBE VIVO · Cuidar la naturaleza es tarea de todos</strong><p>Proyecto educativo sobre clima, ecosistemas, biodiversidad, matemáticas y tecnología.</p><p class="small">Nota: los datos de la gráfica son ilustrativos. Para una entrega académica, agrega fuentes y estadísticas verificadas.</p><a href="#inicio" style="color:#d4f28b">Volver al inicio ↑</a></footer>
+</body>
+</html>
